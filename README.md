@@ -1,15 +1,24 @@
 # ring-json-response
 
-I'm an app. Or maybe I'm a library? I haven't decided yet. 
+A small library for returning JSON responses from a Ring handler.
 
-The choice is up to you!
+## Install
+
+Add the following dependency to your `project.clj` file:
+
+    [ring-json-response "0.1.0-SNAPSHOT"]
 
 ## Usage
 
-FIXME
+```clojure
+(use 'ring.util.json)
+
+(defn handler [request]
+  (json-response {:foo "bar"})
+```
 
 ## License
 
-Copyright © 2012 FIXME
+Copyright © 2012 James Reeves
 
 Distributed under the Eclipse Public License, the same as Clojure.
