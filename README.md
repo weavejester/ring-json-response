@@ -10,11 +10,27 @@ Add the following dependency to your `project.clj` file:
 
 ## Usage
 
+You can write JSON responses using the `json-response` method:
+
 ```clojure
-(use 'ring.util.json)
+(use 'ring.util.json-response)
 
 (defn handler [request]
   (json-response {:foo "bar"})
+```
+
+Or use middleware to convert any response with a map as a body into
+JSON:
+
+```clojure
+(use 'ring.middleware.json-response
+     'ring.util.response)
+
+(defn handler [request]
+  (response {:foo "bar"}))
+
+(def app
+  (wrap-json-response handler))
 ```
 
 ## License
