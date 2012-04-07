@@ -1,4 +1,4 @@
-(ns ring.util.json
+(ns ring.util.json-response
   (:require [cheshire.core :as json])
   (:use [ring.util.response :only (response content-type)]))
 

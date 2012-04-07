@@ -1,5 +1,5 @@
-(ns ring.util.test.json
-  (:use ring.util.json
+(ns ring.util.test.json-response
+  (:use ring.util.json-response
         clojure.test))
 
 (deftest json-response-test
