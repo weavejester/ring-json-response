@@ -6,7 +6,7 @@ A small library for returning JSON responses from a Ring handler.
 
 Add the following dependency to your `project.clj` file:
 
-    [ring-json-response "0.2.0']
+    [ring-json-response "0.2.0"]
 
 ## Usage
 
